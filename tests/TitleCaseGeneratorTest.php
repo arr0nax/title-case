@@ -79,6 +79,19 @@
             //Assert
             $this->assertEquals("Boat on: a Boat Story", $result);
         }
+
+        function test_titleCaseIt_hyphenated()
+        {
+            //Arrange
+            $test_TitleCaseGenerator = new TitleCaseGenerator;
+            $input = "boaT-stORy: love in thE time of BoatS";
+
+            //Act
+            $result = $test_TitleCaseGenerator->titleCaseIt($input);
+
+            //Assert
+            $this->assertEquals("Boat-Story: Love in the Time of Boats", $result);
+        }
      }
 
 ?>

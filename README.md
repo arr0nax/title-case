@@ -18,5 +18,5 @@
   * **Input:** boat on: a boat sTory
   * **Expected Output:** Boat on: a Boat Story
 * _App will capitalize the second word in a hyphenated word_
-  * **Input:** boat on: a boat sTory
-  * **Expected Output:** Boat on: a Boat Story
+  * **Input:** boaT-stORy: love in thE time of BoatS
+  * **Expected Output:** Boat-Story: Love in the Time of Boats
