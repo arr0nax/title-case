@@ -12,8 +12,11 @@
   * **Input:** on water there are boats
   * **Expected Output:** On Water There Are Boats
 * _App will ignore input capitalization_
-  * **Input:**
-  * **Expected Output:**
+  * **Input:** oN WatEr tHerE arE Boats
+  * **Expected Output:** On Water There Are Boats
 * _App will ignore punctuation_
-  * **Input:**
-  * **Expected Output:**
+  * **Input:** boat on: a boat sTory
+  * **Expected Output:** Boat on: a Boat Story
+* _App will capitalize the second word in a hyphenated word_
+  * **Input:** boat on: a boat sTory
+  * **Expected Output:** Boat on: a Boat Story

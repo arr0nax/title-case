@@ -7,10 +7,12 @@
 
         function titleCaseIt($input)
         {
+            $input = strtolower($input);
             $input_array = explode(' ', $input);
             $result = [];
             foreach($input_array as $word) {
-                if (!in_array($word, $this->forbidden_words))
+                $test_word = preg_replace("/[[:punct:]]/", "", $word);
+                if (!in_array($test_word, $this->forbidden_words))
                 {
                     $word = ucfirst($word);
                     array_push($result, $word);

@@ -52,9 +52,33 @@
 
             //Assert
             $this->assertEquals("On Water There Are Boats", $result);
-
-
         }
-    }
+
+        function test_titleCaseIt_ignoreCapitalization()
+        {
+            //Arrange
+            $test_TitleCaseGenerator = new TitleCaseGenerator;
+            $input = "oN WatEr tHerE arE Boats";
+
+            //Act
+            $result = $test_TitleCaseGenerator->titleCaseIt($input);
+
+            //Assert
+            $this->assertEquals("On Water There Are Boats", $result);
+        }
+
+        function test_titleCaseIt_punctuationIgnored()
+        {
+            //Arrange
+            $test_TitleCaseGenerator = new TitleCaseGenerator;
+            $input = "boat on: a boat sTory";
+
+            //Act
+            $result = $test_TitleCaseGenerator->titleCaseIt($input);
+
+            //Assert
+            $this->assertEquals("Boat on: a Boat Story", $result);
+        }
+     }
 
 ?>
