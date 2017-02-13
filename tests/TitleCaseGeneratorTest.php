@@ -27,6 +27,34 @@
 
             $this->assertEquals('Boats Will Float', $result);
         }
+
+        function test_titleCaseIt_prepositions()
+        {
+            //Arrange
+            $test_TitleCaseGenerator = new TitleCaseGenerator;
+            $input = "boats are the best on water and i love them";
+
+            //Act
+            $result = $test_TitleCaseGenerator->titleCaseIt($input);
+
+            //Assert
+            $this->assertEquals("Boats Are the Best on Water and I Love Them", $result);
+        }
+
+        function test_titleCaseIt_firstWordCapitalized()
+        {
+            //Arrange
+            $test_TitleCaseGenerator = new TitleCaseGenerator;
+            $input = "on water there are boats";
+
+            //Act
+            $result = $test_TitleCaseGenerator->titleCaseIt($input);
+
+            //Assert
+            $this->assertEquals("On Water There Are Boats", $result);
+
+
+        }
     }
 
 ?>
