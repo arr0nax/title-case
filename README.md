@@ -1,3 +1,7 @@
+# Title Case
+## A website that capitalizes important words
+made to practice manipulating strings in php
+
 ## Application Spex
 * _App will accept a word an capitalize the first letter_
   * **Input:** boats
